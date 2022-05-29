@@ -27,4 +27,7 @@ Após criar um caso, as pessoas poderão usar o aplicativo para encontrar esses 
 ## Grupo
 
 - Vinícius Lourenço Claro Cardoso - 180618
-
+- Rafael Azzolini - 200120
+- Alex Vianna Bilesck de Pontes - 200232
+- Daniela Marques Antunes - 190553
+- Celso H A Diniz - 180050
