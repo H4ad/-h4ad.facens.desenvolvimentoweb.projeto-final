@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 
 import { FiLogIn } from 'react-icons/fi';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import heroes from '../../assets/heroes.png';
 import beTheHero from '../../assets/logo.svg';
 
 import { LoginPayload } from '../../models/payloads/login.payload';
-import { auth, getMe } from '../../services/api';
+import { auth } from '../../services/api';
 
 import './styles.css';
 
@@ -52,11 +52,6 @@ export default function Logon() {
     if (typeof authResponse === 'string')
       return setError(authResponse);
 
-    const meResponse = await getMe();
-
-    if (typeof meResponse === 'string')
-      return setError(meResponse);
-
     history.push('/incidents');
   }
 
@@ -74,10 +69,10 @@ export default function Logon() {
           <input placeholder="E-mail" type="email" value={ email } onChange={ e => setEmail(e.target.value) } />
           <button>Entrar</button>
           <div className="logon--form--register">
-            <a href="/register">
+            <Link to="/register">
               <FiLogIn size={ 16 } color="#E02041" />
               <span>Não tenho cadastro</span>
-            </a>
+            </Link>
           </div>
         </div>
       </form>

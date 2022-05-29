@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 import { FiArrowLeft } from 'react-icons/fi';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import beTheHero from '../../assets/logo.svg';
 
@@ -79,9 +79,9 @@ export default function Register() {
     const authResponse = await auth(loginPayload);
 
     if (typeof authResponse === 'string')
-      return void setError(authResponse);
+      return setError(authResponse);
 
-    history.push('/ongs');
+    history.push('/incidents');
   }
 
   //#endregion
@@ -96,10 +96,10 @@ export default function Register() {
           <h2>Cadastro</h2>
           <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
           <div className="register--back">
-            <a href="/">
+            <Link to="/">
               <FiArrowLeft size={ 18 } color="#E02041" />
               <span>Voltar para o logon</span>
-            </a>
+            </Link>
           </div>
         </div>
         <form noValidate={ true } onSubmit={ onSubmit } className="register--form">
@@ -111,10 +111,10 @@ export default function Register() {
           <input placeholder="UF" type="text" maxLength={ 2 } value={ uf } onChange={ e => setUf(e.target.value) } />
           <button>Cadastrar</button>
           <div className="register--back">
-            <a href="/">
+            <Link to="/">
               <FiArrowLeft size={ 18 } color="#E02041" />
               <span>Voltar para o logon</span>
-            </a>
+            </Link>
           </div>
         </form>
       </div>

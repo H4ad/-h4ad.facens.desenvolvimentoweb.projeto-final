@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 import { FiArrowLeft } from 'react-icons/fi';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import beTheHero from '../../assets/logo.svg';
 
@@ -67,10 +67,10 @@ export default function CreateIncident(props: any) {
           <h2>Cadastrar novo caso</h2>
           <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
           <div className="create-incident--back">
-            <a href={ backUrl }>
+            <Link to={ backUrl }>
               <FiArrowLeft size={ 18 } color="#E02041" />
               <span>Voltar para home</span>
-            </a>
+            </Link>
           </div>
         </div>
         <form noValidate={ true } onSubmit={ onSubmit } className="create-incident--form">
@@ -80,10 +80,10 @@ export default function CreateIncident(props: any) {
           <input placeholder="Valor em reais" type="number" value={ value } onChange={ e => setValue(+e.target.value) } />
           <button>Cadastrar</button>
           <div className="create-incident--back">
-            <a href="/incidents">
+            <Link to="/incidents">
               <FiArrowLeft size={ 18 } color="#E02041" />
               <span>Voltar para home</span>
-            </a>
+            </Link>
           </div>
         </form>
       </div>
