@@ -12,7 +12,7 @@ import { UserProxy } from '../models/proxies/user.proxy';
 //#endregion
 
 const api = axios.create({
-  baseURL: 'http://localhost:3010',
+  baseURL: 'https://facens-dev-web-final.herokuapp.com',
 });
 
 export default api;
