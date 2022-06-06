@@ -14,6 +14,13 @@ O projeto foi pensado pelo time da :rocket: [Rocketseat](https://github.com/Rock
 
 Após criar um caso, as pessoas poderão usar o aplicativo para encontrar esses casos e serem os heróis para essa ONG.
 
+## Acessar o projeto
+
+Para acessar o projeto, você pode acessar os links:
+
+- Frontend: https://irritating-shape.surge.sh
+- Backend: https://facens-dev-web-final.herokuapp.com
+
 ## Tecnologias
 
 - Frontend: React
