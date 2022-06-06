@@ -10,6 +10,7 @@ export async function getDatabaseConnection(): Promise<DataSource> {
     database: process.env.DB_DATABASE,
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
+    useNewUrlParser: true,
     logger: 'advanced-console',
     logging: true,
     synchronize: true,
