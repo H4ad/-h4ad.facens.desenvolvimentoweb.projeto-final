@@ -6,16 +6,13 @@ module.exports = {
   entry: './src/index.ts',
   module: {
     rules: [
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
       {
-        test: /\.tsx?$/,
-        loader: 'esbuild-loader',
-        options: {
-          loader: 'tsx', // Or 'ts' if you don't need tsx
-          target: 'node12',
-          tsconfigRaw: require('./tsconfig.json'),
-        },
+        test: /\.ts$/,
+        use: [
+          'ts-loader',
+        ],
       },
+      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
       {
         test: /\.(db)$/i,
         type: 'asset/resource',
