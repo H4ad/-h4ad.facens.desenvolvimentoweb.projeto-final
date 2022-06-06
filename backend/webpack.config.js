@@ -12,7 +12,7 @@ module.exports = {
         loader: 'esbuild-loader',
         options: {
           loader: 'tsx', // Or 'ts' if you don't need tsx
-          target: 'es2015',
+          target: 'node12',
           tsconfigRaw: require('./tsconfig.json'),
         },
       },
@@ -38,7 +38,7 @@ module.exports = {
     minimize: true,
     minimizer: [
       new ESBuildMinifyPlugin({
-        target: 'es2015', // Syntax to compile to (see options below for possible values)
+        target: 'es2020', // Syntax to compile to (see options below for possible values)
       }),
     ],
   },

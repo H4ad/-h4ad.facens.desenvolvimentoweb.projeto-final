@@ -5,7 +5,8 @@
     "start": "ts-node src/index.ts",
     "start:dev": "nodemon --watch ./**/*.ts --exec ts-node src/index.ts",
     "start:prod": "node dist/main.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "deploy:heroku": "cd .. && git subtree push --prefix backend backend master"
   },
   "dependencies": {
     "cors": "^2.8.5",
